@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <div class="logo-text">About Me</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="project.html">About Me</a></li>  
+                        <li><a href="mailto:cdarmajaya@gmail.com">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="about">
+                    <h1>About Me</h1>
+         
+                    <p> I'm a Frontend Anthusiast, Web Developer, Programmer from Bandung, Indonesia.  
+                     Studying in web development and IoT Development. I enjoy working as a team, curious about new things, ready to learn.
+                   </p>
+         
+                   <p>
+                     My aim is to bring across your message and identity in the most creative way.
+                   </p>
+                   <h2>Hard Skills</h2>
+                   <div class="work">
+                      <div class="workbox">
+                          <div class="icon">
+                             <img src="images/ui.svg" alt="">
+                          </div>
+                          <div class="desc">
+                             <h3>Version Control</h3>
+                             <p>Basic Git, GitHub</p>
+                          </div>
+                      </div>
+         
+                      <div class="workbox">
+                         <div class="icon">
+                            <img src="images/app.svg" alt="">
+                         </div>
+                         <div class="desc">
+                            <h3>App Developement</h3>
+                            <div></div>
+                            <p>Android Studio, Java</p>
+                         </div>
+                     </div>
+         
+                     <div class="workbox">
+                         <div class="icon">
+                            <img src="images/api.svg" alt="">
+                         </div>
+                         <div class="desc">
+                            <h3>API Developement</h3>
+                            <p>Basic Node.js</p>
+                         </div>
+                     </div>
+         
+                     <div class="workbox">
+                         <div class="icon">
+                            <img src="images/web.svg" alt="">
+                         </div>
+                         <div class="desc">
+                            <h3>Web Developement</h3>
+                            <p>Basic HTML, CSS, Javascript</p>
+                         </div>
+                     </div>
+                   </div>
+
+                   <h2>My Projects</h2>
+                   <div class="work">
+                    <div class="workbox">
+                        <div class="images-project">
+                           <img src="projects/PlantSense.jpg" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Plant Sense</h3>
+                            <div class="details-more">
+                                <a href="https://github.com/ImZacvin/Plantsense" target="_blank">See Details  ></a>
+                            </div>
+                        </div>
+                    </div>
+       
+                    <div class="workbox">
+                        <div class="images-project">
+                          <img src="projects/PhotoBox.png" alt="">
+                        </div>
+                       <div class="details">
+                          <h3>Photo Box</h3>
+                          <div class="details-more">
+                            <a href="https://github.com/ImZacvin/photobox" target="_blank">See Details  ></a>
+                        </div>
+                       </div>
+                   </div>
+       
+                   <div class="workbox">
+                        <div class="images-project">
+                          <img src="projects/Captionize.jpg" alt="">
+                       </div>
+                       <div class="details">
+                          <h3>Captionize</h3>
+                          <div class="details-more">
+                            <a href="https://github.com/ImZacvin/Captionize" target="_blank">See Details  ></a>
+                        </div>
+                       </div>
+                   </div>
+       
+                   <div class="workbox">
+                        <div class="images-project">
+                          <img src="projects/CameraApp.jpg" alt="">
+                       </div>
+                       <div class="details">
+                          <h3>Camera App</h3>
+                          <div class="details-more">
+                            <a href="https://github.com/ImZacvin/Camera-App" target="_blank">See Details  ></a>
+                            </div>
+                       </div>
+                   </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Frontend Anthusias","Web Developer","IoT Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
+</body>
+</html>
