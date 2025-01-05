@@ -17,18 +17,37 @@
                 <div class="logo">
                     <div class="logo-text">About Me</div>
                 </div>
-                <nav>
-                    <div class="togglebtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="navlinks">
+                <nav class="navbar">
+                    <div class="container">
+                      <!-- Brand and Hamburger Menu -->
+                      <div class="navbar-header">
+                        <button class="menu-toggle" onclick="sidebar()">
+                          <i class="fa-solid fa-bars"></i>
+                        </button>
+                      </div>
+                      
+                      <ul class="mobile-nav-links js-sidebar">
+                        <div class="close">
+                            <button class="menu-toggle-close" onclick="sidebar()">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </div>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="project.html">About Me</a></li>  
                         <li><a href="mailto:cdarmajaya@gmail.com">Contact Me</a></li>
-                    </ul>
-                </nav>
+                      </ul>
+
+                      <!-- Navigation Links -->
+                       <div class="desktop-navlinks">
+                            <ul class="navlinks">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="project.html">About Me</a></li>  
+                                <li><a href="mailto:cdarmajaya@gmail.com">Contact Me</a></li>
+                            </ul>
+                       </div>
+                      
+                    </div>
+                </nav>                         
             </header>
             <div class="container">
                  <div class="hero-pic">
@@ -58,15 +77,15 @@
      <!---typed js for typing text effect-->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
      <script>
-        /** creating button click show hide navbar **/
-        var togglebtn=document.querySelector(".togglebtn");
-        var nav=document.querySelector(".navlinks");
-        var links=document.querySelector(".navlinks li");
-
-        togglebtn.addEventListener("click", function(){
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        })
+        function sidebar() {
+            const sidebar = document.querySelector('.js-sidebar');
+            if (sidebar) {
+              sidebar.classList.toggle('open'); // Toggle 'open' class to show/hide sidebar
+            } else {
+              console.error('Sidebar element not found.');
+            }
+          }
+          
 
         var typed=new Typed(".input",{
             strings:["Frontend Anthusias","Web Developer","Programmer"],
